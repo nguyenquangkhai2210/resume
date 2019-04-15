@@ -26,10 +26,10 @@ export default () => ({
   ],
   education: {
     "2016 - 2020": "Software Engineering at FPT University, HCMC",
-    "2013 - 2016": "Class of Science at Tran Quoc Toan High School, Dac Lak"
+    "2013 - 2016": "Class of Science at Phu Bai High School, Thua Thien Hue"
   },
   projects: {
-    "<a target='_blank' href='https://github.com/hungptse/resume'>Resume</a> - Apr 2019":
+    "<a target='_blank' href='https://github.com/nguyenquangkhai2210/resume'>Resume</a> - Apr 2019":
       "Personal resume, blog and portfolio with ReactJS/Redux",
     "<a target='_blank' href='https://github.com/nguyenquangkhai2210/booking_tour'>Tour booking</a> - Mar 2019":
       "Build shopping cart with JavaEE/Servlets, JWT and ReactJS",

@@ -1,6 +1,6 @@
 export default () => ({
   information: {
-    "Full name": "Nguyen Quang Khaur",
+    "Full name": "Nguyen Quang Khai",
     "Day of birth": "November 10, 1998",
     "Phone number": "0325575111",
     Email: "nguyenquangkhai2210@gmail.com",

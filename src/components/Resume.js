@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Tag, Timeline } from "antd";
+import { Tag, Timeline, Icon as IconAnt } from "antd";
 import { connect } from "react-redux";
-import { Button, Icon, Label } from "semantic-ui-react";
+import { Button, Icon } from "semantic-ui-react";
 class Resume extends Component {
   componentDidMount() {
     console.log(this.props);
@@ -12,6 +12,7 @@ class Resume extends Component {
       skill_front_end,
       skill_back_end,
       skill_others,
+      tool_others,
       objective,
       education,
       activities,
@@ -31,10 +32,14 @@ class Resume extends Component {
       <Button content={value} size="small" secondary basic />
     ));
 
+    const listSkillOther = skill_others.map(value => (
+      <Button content={value} size="small" secondary basic />
+    ));
+
     const objectiveList = objective.map(value => (
       <div dangerouslySetInnerHTML={{ __html: value }} />
     ));
-    const listSkillOthers = skill_others.map(value => (
+    const listTools = tool_others.map(value => (
       <Button
         style={{ marginTop: 5 }}
         content={value}
@@ -87,6 +92,12 @@ class Resume extends Component {
           </h3>
           <Timeline>{listEducation}</Timeline>
         </div>
+        <div style={{ marginTop: 10 }}>
+          <h3>
+            <Icon name="fork" /> Projects
+          </h3>
+          <Timeline>{listProjects}</Timeline>
+        </div>
         <div style={{ marginBottom: 10 }}>
           <h3>
             <Icon name="code" /> Skills
@@ -111,24 +122,24 @@ class Resume extends Component {
           {listSkillBackEnd}
         </div>
         <div style={{ marginBottom: 10 }}>
-          <h3>
-            <Icon name="setting" /> Others
-          </h3>
+          <Button as="div" labelPosition="right">
+            <Button basic color="blue">
+              <IconAnt style={{marginRight: 5}} type="thunderbolt" />
+              Others:
+            </Button>
+          </Button>
+          {listSkillOther}
+        </div>
+        <div style={{ marginBottom: 10 }}>
           <div>
             <Button as="div" labelPosition="right">
               <Button basic color="blue">
-                <Icon name="database" />
+                <IconAnt style={{marginRight: 5}} type="tool" />
                 Tool
               </Button>
             </Button>
-            {listSkillOthers}
+            {listTools}
           </div>
-        </div>
-        <div style={{ marginTop: 10 }}>
-          <h3>
-            <Icon name="fork" /> Projects
-          </h3>
-          <Timeline>{listProjects}</Timeline>
         </div>
         <div>
           <h3>
